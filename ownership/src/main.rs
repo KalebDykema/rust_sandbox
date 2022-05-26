@@ -12,6 +12,31 @@ fn main() {
     //     // drop s;
     // }
 
-    // let x = 5;
-    // let y = 5;
+    // let x = String::from("Hello World");
+    // let y = x;
+
+    // // This won't work, as this value is now out of scope and was dropped from memory after re-assigning it to y.
+    // // println!("{}", x);
+    // println!("{}", y);
+
+    // let x = String::from("Hello World");
+    // let y = x.clone();
+
+    // // This will work, only because we cloned it up above
+    // println!("{}", x);
+    // println!("{}", y);
+
+    // let x = 3;
+    // let y = x;
+
+    // // This will work without copying, because the size is known at compilation time
+    // println!("{}", x);
+    // println!("{}", y);
+
+    let x = "This works";
+    let y = x;
+
+    // This will also work without copying, because the size is known at compilation time
+    println!("{}", x);
+    println!("{}", y);
 }
